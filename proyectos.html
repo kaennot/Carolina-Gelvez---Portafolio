@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Proyectos | Carolina Gelves</title>
+  <link rel="icon" href="img/CG.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Carolina Gelvez</div>
+    <nav>
+      <ul>
+        <li><a href="pagina-principal.html">Inicio</a></li>
+      </ul>
+    </nav>
+    <button class="btn-contact">Contáctame</button>
+  </header>
+
+  <!-- PROYECTOS -->
+  <section class="proyectos section">
+    <h2>Proyectos Destacados</h2>
+    <h2>ilustración análoga</h2>
+   <div class="grid">
+    <div class="card fade-slide">
+      <img src="img/ia.jpg" alt="Ilustración análoga">
+      <p>Dibujo a mano y coloreado.</p>
+    </div>
+    <div class="card fade-slide">
+      <img src="img/ia2.jpg" alt="Ilustración digital">
+      <p>Dibujo a mano solo a grafito.</p>
+    </div>
+    <div class="card fade-slide">
+      <img src="img/ia3.jpg" alt="Retoque digital">
+      <p>Dibujo a mano solo a grafito.</p>
+    </div>
+  </div>
+</section>
+  <section class="proyectos section">
+    <h2>Ilustración digital</h2>
+   <div class="grid">
+    <div class="card fade-slide">
+      <img src="img/id.jpg" alt="Ilustración análoga">
+      <p>ilustración realizada en Ibispaint.</p>
+    </div>
+    <div class="card fade-slide">
+      <img src="img/id2.jpg" alt="Ilustración digital">
+      <p>ilustración realizada en Ibispaint.</p>
+    </div>
+    <div class="card fade-slide">
+      <img src="img/id3.jpg" alt="Retoque digital">
+      <p>ilustración realizada en Photoshop.</p>
+    </div>
+  </div>
+</section>
+  <section class="proyectos section">
+    <h2>Retoque digital</h2>
+   <div class="grid">
+    <div class="card fade-slide">
+      <img src="img/rd.jpg" alt="Ilustración análoga">
+      <p>Corrección de color y eliminación de fondos.</p>
+    </div>
+    <div class="card fade-slide">
+      <img src="img/rd2.jpg" alt="Ilustración digital">
+      <p>Corrección de color y eliminación de fondos.</p>
+    </div>
+    <div class="card fade-slide">
+      <img src="img/rd3.jpg" alt="Retoque digital">
+      <p>Corrección de color y eliminación de fondos.</p>
+    </div>
+  </div>
+</section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contacto section">
+    <h2>¡Contáctame!</h2>
+    <div class="contact-content">
+      <div class="contact-info">
+        <p><strong>📞 +57 318 6668723</strong></p>
+        <p><strong>✉️ carolina@gmail.com</strong></p>
+        <div class="social-links">
+          <a href="#">Instagram</a> •
+          <a href="#">TikTok</a> •
+          <a href="#">Behance</a>
+        </div>
+      </div>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+        <textarea name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
+        <button type="submit" class="btn-contact">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 Carolina Gelvez - Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Animaciones -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const elements = document.querySelectorAll(".fade-slide");
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+          }
+        });
+      }, { threshold: 0.2 });
+
+      elements.forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
